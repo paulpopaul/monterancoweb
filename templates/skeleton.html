@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7VQY9J7TWQ');
+</script>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+<meta name="description" content="MonteRanco - Estudio de Grabación - Futrono" />
+<meta name="keywords" content="MonteRanco - Estudio de Grabación - Futrono" />
+
+<meta name="author" content="Paul Pineda"/>
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+<title>MonteRanco - Estudio de Grabación - Futrono"</title>
+<link rel="stylesheet" href="{% static 'css/site.css' %}">
+
+
+<script data-name="static-context">
+Static = window.Static || {};
+Static.SQUARESPACE_CONTEXT = {
+"tweakJSON": {
+
+"header-vert-padding": "3vw",
+"header-width": "Full",
+"maxPageWidth": "1200px",
+"pagePadding": "4vw",
+
+"tweak-fixed-header": "false",
+"tweak-fixed-header-style": "Basic",
+"tweak-global-animations-animation-curve": "ease",
+"tweak-global-animations-animation-delay": "0.1s",
+"tweak-global-animations-animation-duration": "0.1s",
+"tweak-global-animations-animation-style": "fade",
+"tweak-global-animations-animation-type": "none",
+"tweak-global-animations-complexity-level": "detailed",
+"tweak-global-animations-enabled": "false",
+"tweak-transparent-header": "true"
+},
+};
+</script>
+
+<style id="colorThemeStyles">
+body{
+background: #000000;
+}
+
+:root {
+--white-hsl: 0, 0%, 100%;
+--black-hsl: 0, 0%, 0%;
+--safeLightAccent-hsl: 204.38709677419354, 79.4871794871795%, 38.23529411764706%;
+--safeInverseAccent-hsl: 0, 0%, 100%;
+--safeInverseLightAccent-hsl: 0, 0%, 100%;
+--safeInverseDarkAccent-hsl: 0, 0%, 100%;
+--accent-hsl:0, 0%, 0%;
+--lightAccent-hsl: 0, 0%, 0%;
+--darkAccent-hsl: 0, 0%, 2%;
+}
+
+.dark {
+--menuOverlayBackgroundColor: hsla(var(--darkAccent-hsl), 1);
+--menuOverlayNavigationLinkColor: hsla(var(--white-hsl), 1);
+--menuOverlayButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+--menuOverlayButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+}
+.bright {
+--siteBackgroundColor: hsla(var(--accent-hsl), 1);
+--backgroundOverlayColor: hsla(var(--accent-hsl), 1);
+--siteTitleColor: hsla(var(--safeInverseAccent-hsl), 1);
+--navigationLinkColor: hsla(var(--safeInverseAccent-hsl), 1);
+--headingExtraLargeColor: hsla(var(--safeInverseAccent-hsl), 1);
+--headingLargeColor: hsla(var(--safeInverseAccent-hsl), 1);
+--headingMediumColor: hsla(var(--safeInverseAccent-hsl), 1);
+--headingSmallColor: hsla(var(--safeInverseAccent-hsl), 1);
+--menuOverlayBackgroundColor: hsla(var(--accent-hsl), 1);
+--menuOverlayNavigationLinkColor: hsla(var(--safeInverseAccent-hsl), 1);
+--menuOverlayButtonBackgroundColor: hsla(var(--safeInverseAccent-hsl), 1);
+--menuOverlayButtonTextColor: hsla(var(--accent-hsl), 1);
+}
+</style>
+</head>
+
+<body id="" class="header-overlay-alignment-left header-width-full " tabindex="-1" data-animation-state="booted">
+<div id="siteWrapper" class="clearfix site-wrapper">
+{% include "menu-nav.html" %}
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+</body>
+<script type="text/javascript" src="{% static 'js/site-bundle.5fcbca3fd483c49b0becf4ee21d2605e.js' %}"></script>
+
+</html>

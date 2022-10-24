@@ -1,0 +1,334 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+background:#000000;
+}
+hr{
+color: #cccccc;
+}
+.container-wrap {
+margin: 0 auto;
+justify-content: center;
+text-align: center;
+padding-bottom: 100px;
+}
+.embed-responsive-item{
+width: 100%;
+}
+.ico-social{
+color: #ffffff;
+display: inline-block;
+background: #ff002f;
+background-image: linear-gradient(to right, #2140b3, #ff002f);
+
+border-radius: 50%;
+}
+.ico-social:hover{
+color: #cccccc;
+opacity: 0.9;
+}
+.ico-social-union{
+color: #00922d;
+display: inline-block;
+}
+.ico-social-union:hover{
+color: #cccccc;
+}
+.ico-social-dos{
+color: #000000;
+display: inline-block;
+background: #ffffff;
+width:32px;
+height: 32px;
+border-radius: 50%;
+}
+.ico-social-dos:hover{
+color: #cccccc;
+}
+/*--- IPHONE 4 ---*/
+@media (min-width: 200px) and (max-width:374px) {
+.box-unete{
+padding-bottom: 60px;
+}
+.logo-monteranco{
+width: 154px;
+padding-top: 40px;
+padding-bottom: 30px;
+}
+.logo-monteranco-dos{
+width: 100px;
+padding-top: 40px;
+padding-bottom: 30px;
+}
+.logo-malicia{
+width: 130px;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+.logo-union{
+    width: 124px;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+.ico-social{
+font-size: 18px;
+width: 29px;
+height: 29px;
+line-height: 29px;
+}
+.ico-social-union{
+font-size: 18px;
+width: 29px;
+height: 29px;
+line-height: 29px;
+}
+.ico-social-dos{
+font-size: 18px;
+width: 29px;
+height: 29px;
+line-height: 29px;
+}
+.embed-responsive-item {
+height: 173px;
+}
+}
+@media (min-width:375px) and (max-width: 413px) {
+.box-unete{
+padding-bottom:70px;
+}
+.logo-monteranco{
+width: 182px;
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.logo-monteranco-dos{
+width: 120px;
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.logo-malicia{
+width: 182px;
+padding-top: 59px;
+padding-bottom: 20px;
+}
+.logo-union{
+    width: 124px;
+padding-top: 59px;
+padding-bottom: 20px;    
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-union{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-dos{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.embed-responsive-item{
+height: 198px;
+}
+}
+@media (min-width: 414px) and (max-width: 767px)  {
+.box-unete{
+padding-bottom:90px;
+}
+.logo-monteranco{
+width: 182px;
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.logo-monteranco-dos{
+width: 120px;
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.embed-responsive-item{
+width: 100%;
+height: 213px;
+}
+.logo-malicia{
+width: 182px;
+padding-top: 59px;
+padding-bottom: 20px;
+}
+.logo-union{
+    width: 124px;
+    padding-top: 59px;
+padding-bottom: 20px;
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-union{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-dos{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.box-unete{
+padding-bottom:90px;
+}
+.logo-monteranco{
+width: 242px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.logo-monteranco-dos{
+width: 160px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.embed-responsive-item{
+width: 100%;
+height: 384px;
+}
+.logo-malicia{
+width: 212px;
+padding-top: 59px;
+padding-bottom: 40px;
+}
+.logo-union{
+width: 175px;
+padding-top: 59px;
+padding-bottom: 40px;
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-union{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-dos{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+}
+
+@media (min-width:1024px) and (max-width:1919px){
+.box-unete{
+padding-bottom:80px;
+}
+.logo-monteranco{
+width: 242px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.logo-monteranco-dos{
+width: 242px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.embed-responsive-item{
+width: 100%;
+height: 525px;
+}
+.logo-malicia{
+width: 212px;
+padding-top: 59px;
+padding-bottom: 40px;
+}
+.logo-union{
+width: 192px;
+padding-top:59px ;
+padding-bottom: 40px;
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-union{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-dos{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+}
+
+@media (min-width:1920px) and (max-width:6000px){
+.box-unete{
+padding-bottom:80px;
+}
+.logo-monteranco{
+width: 242px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.logo-monteranco-dos{
+width: 200px;
+padding-top: 80px;
+padding-bottom: 80px;
+}
+.embed-responsive-item{
+width: 100%;
+height: 674px;
+}
+.logo-malicia{
+width: 212px;
+padding-top: 59px;
+padding-bottom: 40px;
+}
+.logo-union{
+width:192px;
+padding-top: 59px;
+padding-bottom: 40px;
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+
+.ico-social-union{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+.ico-social-dos{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+}

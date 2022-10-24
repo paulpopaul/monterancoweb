@@ -1,0 +1,551 @@
+{% url 'contacto:contacto' as contacto %}
+
+
+{% load static %}
+    <header id="header" class="header theme-col--primary bright" data-controller="Header" data-section-id="header" data-header-theme="" data-menu-overlay-theme="dark" data-controllers-bound="Header">
+      <div class="header-announcement-bar-wrapper">
+        <div class="header-inner container--fluid header-mobile-layout-logo-left-nav-right header-layout-nav-right" style="padding: 0;" data-test="header-inner">
+          <!-- Background -->
+          <div class="header-display-desktop" data-content-field="site-title">
+            <!-- Social -->
+            <!-- Title and nav wrapper -->
+            <div class="header-title-nav-wrapper">
+              <!-- Title -->
+              <div class="header-title" data-animation-role="header-element">
+                <div class="header-title-logo">
+                  <a href="/" data-animation-role="header-element">
+                    <img src={% static 'img/logo/logo-monteranco.svg' %}>
+                  </a>
+                </div>
+              </div>
+              <!-- Nav -->
+              <div class="header-nav">
+                <div class="header-nav-wrapper">
+                  <nav class="header-nav-list">
+
+                    <div class="header-nav-item header-nav-item--collection header-nav-item--homepage {% if request.path == '/' %} header-nav-item--active  {% endif %}">
+                      <a href="/" data-animation-role="header-element" aria-current="page">Inicio</a>
+                    </div>
+
+                    <div class="header-nav-item header-nav-item--folder {% if request.path == '/artistas/' %} header-nav-item--active  {% endif %}">
+                      <a href="/artistas" tabindex="-1" data-animation-role="header-element">
+                      Artistas
+                      </a>
+
+                      <!--
+                      <div class="header-nav-folder-content">
+                        <div class="header-nav-folder-item">
+                            <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Overview/ Studio A
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Gear/ Studio A
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Overview/ Studio B
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Gear/ Studio B
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Accommodation/
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      -->
+
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection {% if request.path == '/sesiones/' %} header-nav-item--active  {% endif %}">
+                      <a href="/sesiones" data-animation-role="header-element">
+                      Sesiones
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection {% if request.path == '/salas/' %} header-nav-item--active  {% endif %}">
+                      <a href="/salas" data-animation-role="header-element">
+                        Salas
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection {% if request.path == '/servicios/' %} header-nav-item--active  {% endif %}">
+                      <a href="/servicios" data-animation-role="header-element">
+                        Servicios
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--folder {% if request.path == '/fichatecnica/' %} header-nav-item--active  {% endif %}">
+                      <a href="/fichatecnica" tabindex="-1" data-animation-role="header-element">
+                      Ficha Técnica
+                      </a>
+                      <!--
+                      <a class="header-nav-folder-title" href="/fichatecnica" tabindex="-1" data-animation-role="header-element">
+                      Ficha Tecnica
+                      </a>
+                      <div class="header-nav-folder-content">
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                          <span class="header-nav-folder-item-content">
+                          Our story
+                          </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Area
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            FAQs
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      -->
+
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection  {% if request.path == '/contacto/' %} header-nav-item--active  {% endif %}">
+                      <a href="/contacto" data-animation-role="header-element">
+                      Contacto
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- Actions -->
+            <div class="header-actions header-actions--right">
+              <div class="header-actions-action header-actions-action--social">
+                <a target="_blank" class="icon icon--fill" href="https://www.instagram.com/monteranco_" target="_blank" aria-label="Instagram">
+                  <i class="font-icon-menu reveal fa fa-instagram"></i>
+
+                </a>
+                <a target="_blank" class="icon icon--fill" href="https://www.facebook.com/monteranco" target="_blank" aria-label="Facebook">
+                  <i class="font-icon-menu reveal fa fa-facebook-f"></i>
+
+                </a>
+              </div>
+              <div class="showOnMobile">
+              </div>
+              <div class="showOnDesktop">
+              </div>
+            </div>
+            <!-- Burger -->
+            <div class="header-burger menu-overlay-has-visible-non-navigation-items " data-animation-role="header-element">
+              <button class="header-burger-btn burger" data-test="header-burger">
+                <span class="js-header-burger-open-title visually-hidden">Open Menu</span>
+                <span class="js-header-burger-close-title visually-hidden" hidden="">Close Menu</span>
+                  <div class="burger-box">
+                    <div class="burger-inner header-menu-icon-tripleLineHamburger">
+                    </div>
+                  </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="header-display-mobile" data-content-field="site-title">
+            <!-- Social -->
+            <!-- Title and nav wrapper -->
+            <div class="header-title-nav-wrapper">
+            <!-- Title -->
+              <div class="header-title" data-animation-role="header-element">
+                <div class="header-title-logo">
+                  <a href="/">
+                    <img src={% static 'img/logo/logo-monteranco.svg' %} data-animation-role="header-element">
+                  </a>
+
+                </div>
+              </div>
+              <!-- Nav -->
+              <div class="header-nav">
+                <div class="header-nav-wrapper">
+                  <nav class="header-nav-list">
+                    <div class="header-nav-item header-nav-item--collection  header-nav-item--homepage">
+                      <a href="/" data-animation-role="header-element" aria-current="page">
+                      Inicio
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--folder ">
+                      <a class="header-nav-folder-title" href="/artistas" tabindex="-1" data-animation-role="header-element">
+                      Artistas
+                      </a>
+                      <!--
+                      <div class="header-nav-folder-content">
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Overview/ Studio A
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Gear/ Studio A
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Overview/ Studio B
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Gear/ Studio B
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Accommodation/
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      -->
+                    </div>
+
+                    <div class="header-nav-item header-nav-item--collection">
+                      <a href="/sesiones" data-animation-role="header-element">
+                      Sesiones
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection">
+                      <a href="/salas" data-animation-role="header-element">
+                      Salas
+                      </a>
+                    </div>
+
+                    <div class="header-nav-item header-nav-item--collection">
+                      <a href="/servicios" data-animation-role="header-element">
+                      Servicios
+                      </a>
+                    </div>
+                    <div class="header-nav-item header-nav-item--folder">
+                      <a class="header-nav-folder-title" href="/fichatecnica" tabindex="-1" data-animation-role="header-element">
+                      Ficha Técnica
+                      </a>
+                      <!-- header-nav-item--folder !!!
+                      <div class="header-nav-folder-content">
+                        <div class="header-nav-folder-item">
+                        <a href="/">
+                        <span class="header-nav-folder-item-content">
+                        Our story
+                        </span>
+                        </a>
+                        </div>
+
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            Area
+                            </span>
+                          </a>
+                        </div>
+                        <div class="header-nav-folder-item">
+                          <a href="/">
+                            <span class="header-nav-folder-item-content">
+                            FAQs
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      -->
+
+                    </div>
+                    <div class="header-nav-item header-nav-item--collection {% if request.path == contacto %} header-nav-item--active {% endif %}">
+                      <a href="/contacto" data-animation-role="header-element">
+                      Contacto
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+           
+            <style>
+            .top-bun,
+            .patty,
+            .bottom-bun {
+            height: 1px;
+            }
+            </style>
+
+            <!-- Burger -->
+            <div class="header-burger menu-overlay-has-visible-non-navigation-items" data-animation-role="header-element">
+              <button class="header-burger-btn burger" data-test="header-burger">
+                <span class="js-header-burger-open-title visually-hidden">Open Menu</span>
+                <span class="js-header-burger-close-title visually-hidden" hidden="">Close Menu</span>
+                <div class="burger-box">
+                  <div class="burger-inner header-menu-icon-tripleLineHamburger">
+                    <div class="top-bun"></div>
+                    <div class="patty"></div>
+                    <div class="bottom-bun"></div>
+                  </div>
+                </div>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- (Mobile) Menu Navigation -->
+      <div class="header-menu  "  data-test="header-menu" style="padding-top: 88.3594px;">
+        <div class="header-menu-bg "></div>
+        <div class="header-menu-nav">
+          <nav class="header-menu-nav-list">
+              <div data-folder="root" class="header-menu-nav-folder header-menu-nav-folder--active">
+                <!-- Menu Navigation -->
+                <div class="header-menu-nav-folder-content">
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/' %} 
+                    <a href="/" aria-current="page">
+                    {% else %}
+                    <a href="/" >
+                    {% endif %}
+                      <div class="header-menu-nav-item-content">
+                      Inicio
+                      </div>
+                    </a>
+                  </div>
+
+                  <!--<div class="container header-menu-nav-item {% if request.path == '/artistas/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/artistas/' %} 
+                    <a href="/artistas" aria-current="page">
+                    {% else %}
+                    <a href="/artistas">
+                    {% endif %}    
+
+                    <a data-folder-id="/studios" href="/artistas">
+                      <div class="header-menu-nav-item-content">
+                        <span class="visually-hidden">Folder:</span>
+                        <span>Artistas</span>
+                        <span class="chevron chevron--right"></span>
+                      </div>
+                    </a>
+                  </div>-->
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/artistas/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/artistas/' %} 
+                    <a href="/artistas" aria-current="page">
+                    {% else %}
+                    <a href="/artistas">
+                    {% endif %}
+                    <div class="header-menu-nav-item-content">
+                      Artistas
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/sesiones/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/sesiones/' %} 
+                    <a href="/sesiones" aria-current="page">
+                    {% else %}
+                    <a href="/sesiones">
+                    {% endif %}
+                    <div class="header-menu-nav-item-content">
+                      Sesiones
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/salas/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/salas/' %} 
+                    <a href="/salas" aria-current="page">
+                    {% else %}
+                    <a href="/salas">
+                    {% endif %}
+                      <div class="header-menu-nav-item-content">
+                      Salas
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/servicios/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/servicios/' %} 
+                    <a href="/servicios" aria-current="page">
+                    {% else %}
+                    <a href="/servicios">
+                    {% endif %}
+                      <div class="header-menu-nav-item-content">
+                      Servicios
+                      </div>
+                    </a>
+                  </div>
+
+                  <!--<div class="container header-menu-nav-item {% if request.path == '/fichatecnica/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/fichatecnica/' %} 
+                    <a data-folder-id="/info" href="/fichatecnica" aria-current="page">
+                    {% else %}
+                    <a data-folder-id="/info" href="/fichatecnica">
+                      {% endif %}
+                      <div class="header-menu-nav-item-content">
+                        <span class="visually-hidden">Folder:</span>
+                        <span>Ficha Técnica</span>
+                        <span class="chevron chevron--right"></span>
+                      </div>
+                    </a>
+                  </div>-->
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/fichatecnica/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/fichatecnica/' %} 
+                    <a href="/fichatecnica" aria-current="page">
+                    {% else %}
+                    <a href="/fichatecnica">
+                    {% endif %}
+                    <div class="header-menu-nav-item-content">
+                      Ficha Técnica
+                      </div>
+                    </a>
+                  </div>
+
+
+                  <div class="container header-menu-nav-item header-menu-nav-item--collection {% if request.path == '/contacto/' %} header-nav-item--active {% endif %}">
+                    {% if request.path == '/contacto/' %} 
+                    <a href="/contacto" aria-current="page">
+                    {% else %}
+                    <a href="/contacto">
+                    {% endif %}
+                      <div class="header-menu-nav-item-content">
+                      Contacto
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <style>
+                  .font-icon{
+                    color: #ffffff;
+                    opacity: 1;
+                  }
+                </style>
+                <div class="header-menu-actions">
+
+                  <div class="header-menu-actions-action header-menu-actions-action--social">
+                    <a target="_blank" class="icon icon--lg icon--fill" href="https://www.facebook.com/monteranco" target="_blank" aria-label="Facebook">
+                      <i class="font-icon reveal fa fa-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="header-menu-actions-action header-menu-actions-action--social">
+                    <a target="_blank" class="icon icon--lg icon--fill" href="https://www.facebook.com/monteranco" target="_blank" aria-label="Youtube">
+                      <i class="font-icon reveal fa fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div class="header-menu-actions-action header-menu-actions-action--social">
+                    <a target="_blank" class="icon icon--lg icon--fill" href="https://www.instagram.com/monteranco_" target="_blank" aria-label="Instagram">
+                      <i class=" font-icon fa fa-youtube-play"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--
+              <div data-folder="/studios" class="header-menu-nav-folder">
+                <div class="header-menu-nav-folder-content">
+                <div class="header-menu-controls container header-menu-nav-item">
+                  <a class="header-menu-controls-control header-menu-controls-control--active" data-action="back" href="https://www.oceansound.no/" tabindex="0">
+                    <span class="chevron chevron--left"></span><span>Back</span>
+                  </a>
+                </div>
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Overview/ Studio A
+                    </div>
+                  </a>
+                </div>
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Gear/ Studio A
+                    </div>
+                  </a>
+                </div>
+
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Overview/ Studio B
+                    </div>
+                  </a>
+                </div>
+
+                <div class="container header-menu-nav-item">
+                    <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Gear/ Studio B
+                    </div>
+                  </a>
+                </div>
+
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Accommodation/
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div data-folder="/info" class="header-menu-nav-folder">
+              <div class="header-menu-nav-folder-content">
+                <div class="header-menu-controls container header-menu-nav-item">
+                  <a class="header-menu-controls-control header-menu-controls-control--active" data-action="back" href="/" tabindex="0">
+                  <span class="chevron chevron--left"></span><span>Back</span>
+                  </a>
+                </div>
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Our story
+                    </div>
+                  </a>
+                </div>
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    Area
+                    </div>
+                  </a>
+                </div>
+                <div class="container header-menu-nav-item">
+                  <a href="/" tabindex="0">
+                    <div class="header-menu-nav-item-content">
+                    FAQs
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+
+

@@ -1,0 +1,50 @@
+{% load static %}
+
+{% block content %}
+<h6>sesion 1</h6>
+
+<h6>malicia</h6>
+<h6>electro-pop</h6>
+<h6>valdivia · chile</h6>
+
+
+<div class="embed-responsive embed-responsive-16by9">
+<div id="player">
+</div>
+</div>
+
+<script>var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('player', {
+videoId: '5RtYOG0ptFU',
+});
+}
+function setCurrentTime(slideNum) {
+var object = [ 0, 30, 60, 90, 160, 250 ];
+player.seekTo(object[slideNum]);
+}
+</script>
+
+<strong>Playlist:</strong>
+<ul>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(0)">0:00 Entrevista</a></li>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(1)">1:10 Canción 1</a></li>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(2)">2:10 Canción 2</a></li>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(3)">3:00 Canción 3</a></li>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(4)">4:00 Canción 4</a></li>
+<li><a href="javascript:void(0);" onclick="setCurrentTime(5)">5:00 Canción 5</a></li>
+</ul>
+
+<p>Malicia es el concepto musical artístico de Valdivia que une a Melisa Toro, PabIo Mura, BeIén Rojas y Catalina Vásquez en una agrupación encarnando a una fémina mitad bruja, mitad princesa, víctima de la dialéctica universal que fluye entre lo místico y lo material. De vocación pop pero con claras influencias de new wave,electrónica y triphop, la propuesta artística es el relato de una búsqueda a través de la provocación como un camino de experimentación con las emociones y sensaciones</p>
+
+<h6>redes sociales banda</h6>
+<hr>
+<h6>compartir</h6>
+<hr>
+<h6>redes sociales monteranco</h6>
+
+{% endblock %}

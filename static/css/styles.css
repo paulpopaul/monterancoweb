@@ -1,0 +1,424 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+background:#000000;
+}
+
+/**/
+#hero {
+width: 100%;
+height: 100vh;
+background-color: rgba(34, 39, 43, 0.9);
+overflow: hidden;
+position: relative;
+}
+#hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+}
+#hero .carousel-item::before {
+content: '';
+background-color: rgba(8, 8, 8, 0.9);
+}
+#hero .carousel-container {
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+bottom: 0;
+top: 0px;
+left: 10px;
+right: 10px;
+}
+#hero .container {
+text-align: center;
+}
+#hero .carousel-inner .carousel-item {
+transition-property: opacity;
+background-position: center top;
+}
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+opacity: 0;
+}
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+opacity: 1;
+transition: 0.5s;
+}
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+background: none;
+font-size: 30px;
+line-height: 0;
+width: auto;
+height: auto;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 50px;
+transition: 0.3s;
+color: rgba(255, 255, 255, 0.5);
+width: 54px;
+height: 54px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#hero .carousel-indicators li {
+cursor: pointer;
+background: #fff;
+overflow: hidden;
+border: 0;
+width: 12px;
+height: 12px;
+border-radius: 50px;
+opacity: .6;
+transition: 0.3s;
+}
+#hero .carousel-indicators li.active {
+opacity: 1;
+background: #428bca;
+}
+#hero .btn-get-started {
+font-family: "Raleway", sans-serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 14px 32px;
+border-radius: 4px;
+transition: 0.5s;
+line-height: 1;
+color: #fff;
+-webkit-animation-delay: 0.8s;
+animation-delay: 0.8s;
+background: #428bca;
+}
+
+#hero btn-get-started:hover {
+background: #5697d0;
+}
+
+/**/
+.box-portada{
+margin: 0 auto;
+justify-content: center;
+text-align: center;
+}
+
+.txt-unete{
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+color: #ffffff;
+margin: 0;
+}
+
+.ico-social{
+color: #ffffff;
+display: inline-block;
+}
+
+.ico-social:hover{
+color: #cccccc;
+}
+
+
+/*---- SESIONES ----*/
+
+.box-sesiones{
+background: #D8D8D8;
+padding-top: 60px;
+padding-bottom: 60px;
+text-align: center;
+}
+.box-sesiones-width{
+width: 251px;
+margin: 0 auto;
+}
+.txt-sesiones-header{
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+color: #000;
+font-size: 22px;
+margin: 0;
+padding: 0;
+padding-bottom: 12px;
+}
+
+.txt-sesiones-texto{
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+color: #000;
+font-size: 12px;
+margin: 0;
+padding: 0;
+padding-bottom: 24px;
+}
+
+.ln-sesiones{
+color: #000000;
+opacity: 1;
+}
+
+.box-sesion-banda{
+display: flex;
+padding: 0;
+margin: 0;
+padding-top: 24px;
+}
+.box-sesion-fecha{
+background: #000000;
+width: 94px;
+height: 115px;
+padding:14px 0;
+}
+
+.txt-sesion-dia{
+color:#ffffff;
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+font-size: 45px;
+margin: 0;
+padding: 0 0 2px;
+}
+
+.txt-sesion-mes{
+color: #ffffff;
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+font-size: 10px;
+margin: 0;
+padding: 0;
+letter-spacing:0.9px;
+}
+
+
+
+.box-sesion-image{
+}
+
+.img-sesion-image{
+width: 158px;
+height: 115px;
+object-fit: cover;
+
+}
+
+.box-info-banda{
+display: block;
+height: 94px;
+padding: 19px 0;
+}
+
+.txt-nombre-banda{
+font-size: 26px;
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+margin: 0;
+padding: 0;
+letter-spacing:0.9px;
+}
+
+.txt-categoria-banda{
+font-size: 14px;
+font-family: 'Mate SC'; 
+font-weight: normal; 
+font-style: normal;
+margin: 0;
+padding: 0;
+letter-spacing:0.9px;
+color: #888888;
+}
+
+.box-btn-info-banda{
+padding-bottom:36px;
+}
+
+.btn-info-banda{
+width: 146px;
+height: 56px;
+font-size: 12px;
+background: #000000;
+color: #ffffff;
+text-decoration: none;
+display: inline-block;
+border-radius: 36px;
+line-height:53px ;
+}
+
+.btn-info-banda:hover{
+background: #181818;
+color: #cccccc;
+}
+
+/*--- IPHONE 4 ---*/
+@media (min-width: 200px) and (max-width:374px) {
+.logo-monteranco{
+width: 224px;
+padding-top: 90px;
+padding-bottom: 120px;
+}
+
+.txt-unete{
+font-size: 9px;
+letter-spacing: 2px;
+padding-bottom: 10px;
+
+}
+.ico-social{
+font-size: 18px;
+width: 29px;
+height: 29px;
+line-height: 29px;
+}
+}
+
+@media (min-width:375px) and (max-width: 413px) {
+.logo-monteranco{
+width: 272px;
+padding-top: 100px;
+padding-bottom: 190px;
+}
+
+.txt-unete{
+font-size: 11px;
+letter-spacing: 2px;
+padding-bottom: 15px;
+}
+.ico-social{
+font-size: 21px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+}
+}
+
+@media (min-width: 414px) and (max-width: 767px)  {
+.logo-monteranco{
+width: 304px;
+padding-top: 80px;
+padding-bottom: 150px;
+}
+
+.txt-unete{
+font-size: 11px;
+letter-spacing: 2px;
+padding-bottom: 18px;
+}
+.ico-social{
+font-size: 23px;
+width: 38px;
+height: 38px;
+line-height: 38px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.logo-monteranco{
+width:500px;
+padding-top: 120px;
+padding-bottom: 168px;
+}
+.txt-unete{
+font-size: 12px;
+letter-spacing: 3px;
+padding-bottom: 6px;
+}
+.ico-social{
+font-size: 25px;
+width: 42px;
+height: 42px;
+line-height: 42px;
+}
+}
+
+@media (min-width:1025px) and (max-width:1919px){
+.logo-monteranco{
+width:645px;
+padding-top: 90px;
+padding-bottom: 130px;
+}
+.txt-unete{
+font-size: 11px;
+letter-spacing: 4px;
+padding-bottom: 6px;
+}
+.ico-social{
+font-size: 25px;
+width: 42px;
+height: 42px;
+line-height: 42px;
+}
+}
+
+@media (min-width:1920px) and (max-width:2558px){
+.logo-monteranco{
+width:800px;
+padding-top: 180px;
+padding-bottom: 149px;
+}
+.txt-unete{
+font-size: 26px;
+letter-spacing: 6px;
+padding-bottom: 14px;
+}
+.ico-social{
+font-size: 48px;
+width: 90px;
+height: 90px;
+line-height: 90px;
+}
+}
+
+@media (min-width:2559px) and (max-width:3839px){
+.logo-monteranco{
+width:1290px;
+padding-top: 220px;
+padding-bottom: 269px;
+}
+.txt-unete{
+font-size: 28px;
+letter-spacing: 8px;
+padding-bottom: 14px;
+}
+.ico-social{
+font-size: 54px;
+width: 104px;
+height: 104px;
+line-height: 104px;
+}
+}
+
+@media (min-width:3840px) and (max-width:7000px){
+.logo-monteranco{
+width:1650px;
+padding-top: 430px;
+padding-bottom: 409px;
+}
+.txt-unete{
+font-size: 42px;
+letter-spacing: 8px;
+padding-bottom: 14px;
+}
+.ico-social{
+font-size: 74px;
+width: 145px;
+height: 145px;
+line-height: 145px;
+}
+}

@@ -1,0 +1,479 @@
+{% extends "skeleton.html" %}
+{% load static %}
+
+{% block title %}<title>MonteRanco.com - Salas</title>{% endblock %}
+{% block content %}
+<style>
+body{
+background: black;
+}
+
+.box-contacto{
+position: relative;
+top: 110px;
+text-align: center;
+width: 320px;
+height: 321px;
+margin: 0 auto;
+}
+
+.header-contacto{
+font-size: 24px;
+color: #ffffff;
+letter-spacing:  0.5px;
+margin: 8px 0;
+}
+
+
+</style>
+
+<style>
+    .box-card-contacto{
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+    
+    }
+    
+    .card-contacto{
+    margin: 40px auto;
+    width: 280px;
+    background: #ffffff;
+    padding: 20px 0;
+    }
+    
+    .img-card-contacto{
+    width: 240px;
+    background: #ffffff;
+    }
+    
+    
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    font-size: 22px;
+    margin: 14px 0 10px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    margin: 9px 0;
+    font-size: 16px;
+    }
+    
+    @media (min-width:375px) and (max-width: 413px){
+    .box-contacto{
+    top: 145px;
+    width: 375px;
+    height: 221px;
+    }
+    
+    .header-contacto{
+    font-size: 28px;
+    letter-spacing:  0.5px;
+    margin: 8px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 28px;
+    letter-spacing:  0.5px;
+    text-decoration:underline;
+    margin: 8px 0;
+    }
+    
+    .box-card-contacto{
+    width: 375px;
+    text-align: center;
+    position: relative;
+    top: 142px;
+    }
+    
+    .card-contacto{
+    margin: 40px auto 80px;
+    width: 340px;
+    padding: 25px 0;
+    position: relative;
+    }
+    
+    .img-card-contacto{
+    width: 290px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    font-size: 28px;
+    margin: 18px 0 14px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    margin: 9px 0;
+    font-size: 18px;
+    }
+    }
+    
+    
+    @media (min-width: 414px) and (max-width: 427px){
+    .box-contacto{
+    top: 172px;
+    width: 414px;
+    height: 274px;
+    }
+    
+    .header-contacto{
+    font-size: 32px;
+    letter-spacing:  1px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 30px;
+    letter-spacing:  1px;
+    text-decoration:underline;
+    margin: 14px 0;
+    }
+    
+    .box-card-contacto{
+    width: 414px;
+    text-align: center;
+    position: relative;
+    top: 180px;
+    }
+    .card-contacto{
+    margin: 40px auto 82px;
+    width: 370px;
+    padding: 25px 0;
+    }
+    
+    .img-card-contacto{
+    width: 320px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    font-size: 30px;
+    margin: 18px 0 18px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    margin: 9px 0;
+    font-size: 21px;
+    }
+    }
+    @media (min-width: 428px) and (max-width: 767px){
+    .box-contacto{
+    top: 172px;
+    width: 428px;
+    height: 274px;
+    }
+    
+    .header-contacto{
+    font-size: 33px;
+    letter-spacing:  1px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 31px;
+    letter-spacing:  1px;
+    text-decoration:underline;
+    margin: 14px 0;
+    }
+    
+    .box-card-contacto{
+    width: 428px;
+    text-align: center;
+    position: relative;
+    top: 180px;
+    }
+    .card-contacto{
+    margin: 40px auto 82px;
+    width: 380px;
+    padding: 25px 0;
+    }
+    
+    .img-card-contacto{
+    width: 330px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    font-size: 31px;
+    margin: 18px 0 18px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    margin: 9px 0;
+    font-size: 22px;
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1023px){ 
+    .box-contacto{
+    top: 213px;
+    width: 768px;
+    height: 274px;
+    }
+    
+    .header-contacto{
+    font-size: 33px;
+    letter-spacing:  1px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 31px;
+    letter-spacing:  1px;
+    text-decoration:underline;
+    margin: 14px 0;
+    }
+    
+    .box-card-contacto{
+    width: 768px;
+    text-align: center;
+    position: relative;
+    top: 246px;
+    }
+    .card-contacto{
+    margin: 40px auto 82px;
+    width: 380px;
+    padding: 25px 0;
+    }
+    
+    .img-card-contacto{
+    width: 330px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    font-size: 31px;
+    margin: 18px 0 18px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  0.5px;
+    margin: 9px 0;
+    font-size: 22px;
+    }
+    }
+    
+    @media (min-width: 1024px) and (max-width: 1600px){ 
+    .box-contacto{
+    top: 213px;
+    width: 1024px;
+    height: 274px;
+    }
+    
+    .header-contacto{
+    font-size: 35px;
+    letter-spacing:  1px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 35px;
+    letter-spacing:  1px;
+    text-decoration:underline;
+    margin: 14px 0;
+    }
+    
+    .box-card-contacto{
+    width: 1024px;
+    text-align: center;
+    position: relative;
+    top: 246px;
+    }
+    .card-contacto{
+    margin: 40px auto 82px;
+    width: 535px;
+    padding: 30px 0;
+    }
+    
+    .img-card-contacto{
+    width: 480px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1px;
+    font-size: 38px;
+    margin: 24px 0 24px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1px;
+    margin: 9px 0;
+    font-size: 26px;
+    }
+    }
+    
+    @media (min-width:1601px) and (max-width:2559px){ 
+    .box-contacto{
+    top: 353px;
+    width: 1024px;
+    height: 315px;
+    }
+    
+    .header-contacto{
+    font-size: 38px;
+    letter-spacing:  1.5px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 38px;
+    letter-spacing:  1.5px;
+    text-decoration:underline;
+    margin: 16px 0;
+    }
+    
+    .box-card-contacto{
+    width: 1024px;
+    text-align: center;
+    position: relative;
+    top: 386px;
+    }
+    .card-contacto{
+    margin: 40px auto 100px;
+    width: 580px;
+    padding: 30px 0;
+    }
+    
+    .img-card-contacto{
+    width: 520px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    font-size: 40px;
+    margin: 24px 0 24px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    margin: 9px 0;
+    font-size: 28px;
+    }
+    }
+    @media (min-width:2560px) and (max-width:3839px){ 
+    .box-contacto{
+    top: 442px;
+    width: 1024px;
+    height: 410px;
+    }
+    
+    .header-contacto{
+    font-size: 38px;
+    letter-spacing:  1.5px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 38px;
+    letter-spacing:  1.5px;
+    text-decoration:underline;
+    margin: 16px 0;
+    }
+    
+    .box-card-contacto{
+    width: 1024px;
+    text-align: center;
+    position: relative;
+    top: 386px;
+    }
+    .card-contacto{
+    margin: 40px auto 110px;
+    width: 580px;
+    padding: 30px 0;
+    }
+    
+    .img-card-contacto{
+    width: 520px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    font-size: 40px;
+    margin: 24px 0 24px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    margin: 9px 0;
+    font-size: 28px;
+    }
+    }
+    
+    @media (min-width:3840px) and (max-width:7000px){
+    .box-contacto{
+    top: 662px;
+    width: 1024px;
+    height: 410px;
+    }
+    
+    .header-contacto{
+    font-size: 40px;
+    letter-spacing:  1.5px;
+    margin: 14px 0;
+    }
+    
+    .header-contacto2{
+    font-size: 38px;
+    letter-spacing:  1.5px;
+    text-decoration:underline;
+    margin: 16px 0;
+    }
+    
+    .box-card-contacto{
+    width: 1024px;
+    text-align: center;
+    position: relative;
+    top: 566px;
+    }
+    .card-contacto{
+    margin: 40px auto 110px;
+    width: 580px;
+    padding: 30px 0;
+    }
+    
+    .img-card-contacto{
+    width: 520px;
+    }
+    
+    .header-txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    font-size: 40px;
+    margin: 24px 0 24px;
+    }
+    
+    .txt-card-contacto{
+    color: #000000;
+    letter-spacing:  1.5px;
+    margin: 9px 0;
+    font-size: 28px;
+    }
+    }
+    </style>
+
+<div class="box-contacto">
+<h1 class="header-contacto">Salas/</h1>
+
+</div>
+{% endblock %}
